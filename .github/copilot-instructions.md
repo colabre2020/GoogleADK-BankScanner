@@ -5,8 +5,8 @@
 - [x] Customize the Project - Implemented multi-agent system with coordinator and specialized agents  
 - [x] Install Required Extensions
 - [x] Compile the Project
-- [ ] Create and Run Task
-- [ ] Launch the Project
+- [x] Create and Run Task
+- [x] Launch the Project
 - [ ] Ensure Documentation is Complete
 
 Project: Google ADK Multi-Agent System for Bank Document Processing and Account Creation

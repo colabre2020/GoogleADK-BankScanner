@@ -353,7 +353,7 @@ MIT License - see LICENSE file for details
 
 ## Support
 
-For support, please contact [your-email] or create an issue in the repository.# VERTICAL_DATASET_RESEARCH
+For support, please reach me.
 # GoogleADK-BankScanner
 # GoogleADK-BankScanner
 # GoogleADK-BankScanner

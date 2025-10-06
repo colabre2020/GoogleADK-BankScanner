@@ -1,4 +1,4 @@
-from google.adk.agents import LlmAgent
+from google.adk import Agent
 from .document_scanner_agent import DocumentScannerAgent
 from .validation_agent import ValidationAgent
 from .account_creation_agent import AccountCreationAgent
@@ -8,7 +8,7 @@ import uuid
 from datetime import datetime
 
 
-class CoordinatorAgent(LlmAgent):
+class CoordinatorAgent(Agent):
     """Main coordinator agent that orchestrates the entire bank account creation process"""
     
     def __init__(self):

@@ -1,5 +1,5 @@
-from google.adk.agents import LlmAgent
-from google.adk.tools import Tool
+from google.adk import Agent
+from google.adk.tools import FunctionTool
 from ..tools.document_processor import DocumentProcessor
 from ..models.types import Document, DocumentType, VerificationStatus
 from typing import List, Dict, Any
@@ -7,14 +7,14 @@ import uuid
 from datetime import datetime
 
 
-class DocumentScannerAgent(LlmAgent):
+class DocumentScannerAgent(Agent):
     """Agent responsible for scanning and processing documents"""
     
     def __init__(self):
         self.document_processor = DocumentProcessor()
         
         # Define the document processing tool
-        document_tool = Tool(
+        document_tool = FunctionTool(
             name="process_document",
             description="Process and extract data from uploaded documents",
             func=self._process_document_tool

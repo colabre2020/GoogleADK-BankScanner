@@ -1,24 +1,24 @@
-from google.adk.agents import LlmAgent
-from google.adk.tools import Tool
+from google.adk import Agent
+from google.adk.tools import FunctionTool
 from ..tools.bank_account_tool import BankAccountTool
 from ..models.types import BankAccount, CustomerData, AccountType, AccountStatus
 from typing import Dict, Any
 
 
-class AccountCreationAgent(LlmAgent):
+class AccountCreationAgent(Agent):
     """Agent responsible for creating and managing bank accounts"""
     
     def __init__(self):
         self.bank_account_tool = BankAccountTool()
         
         # Define account management tools
-        create_account_tool = Tool(
+        create_account_tool = FunctionTool(
             name="create_bank_account",
             description="Create a new bank account for a verified customer",
             func=self._create_account_tool
         )
         
-        activate_account_tool = Tool(
+        activate_account_tool = FunctionTool(
             name="activate_account",
             description="Activate a pending bank account",
             func=self._activate_account_tool

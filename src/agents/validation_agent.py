@@ -1,24 +1,24 @@
-from google.adk.agents import LlmAgent
-from google.adk.tools import Tool
+from google.adk import Agent
+from google.adk.tools import FunctionTool
 from ..tools.validation_tool import ValidationTool
 from ..models.types import Document, VerificationStatus, CustomerData
 from typing import List
 
 
-class ValidationAgent(LlmAgent):
+class ValidationAgent(Agent):
     """Agent responsible for validating documents and customer data"""
     
     def __init__(self):
         self.validation_tool = ValidationTool()
         
         # Define validation tools
-        validate_doc_tool = Tool(
+        validate_doc_tool = FunctionTool(
             name="validate_document",
             description="Validate a single document for completeness and accuracy",
             func=self._validate_document_tool
         )
         
-        validate_customer_tool = Tool(
+        validate_customer_tool = FunctionTool(
             name="validate_customer_data",
             description="Validate complete customer data for account creation",
             func=self._validate_customer_tool

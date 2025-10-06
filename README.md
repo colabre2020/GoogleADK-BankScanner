@@ -1,6 +1,6 @@
 # Google ADK Multi-Agent Bank Account Creation System
 
-A sophisticated multi-agent system built with **Google ADK (Application Development Kit)** for automating bank document processing and account creation using Python.
+A sophisticated multi-agent system built with **Google ADK (Agent Development Kit)** for automating bank document processing and account creation using Python.
 
 ## Overview
 
